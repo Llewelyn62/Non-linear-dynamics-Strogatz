@@ -24,7 +24,6 @@ ax.set_xlabel(r'$x$', size=14)
 ax.set_ylabel(r'$y$', size=14)
 
 def init():
-    ax.clear()
     ax.set_xlim(xmin, xmax)
     ax.set_ylim(ymin, ymax)
     return ln, ln2,

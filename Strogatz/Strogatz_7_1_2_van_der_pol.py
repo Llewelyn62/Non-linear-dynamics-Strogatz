@@ -4,6 +4,8 @@ from scipy import integrate
 from scipy.integrate import ode, odeint
 
 #From Strogatz p.201, Ex. 7.1.2
+#Also, this recording goes through how to find  timescale estimates and parameter estimates
+#using averaging. Very worthwhile. https://www.youtube.com/watch?v=ma6wOguLxnI&list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V&index=11
 fig0 = plt.figure(figsize=(10,10))
 fig0.suptitle('van der Pol Oscillator', size=18)
 ax0 = plt.subplot2grid((2,2), (0,0))
