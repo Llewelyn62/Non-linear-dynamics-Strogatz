@@ -7,7 +7,7 @@ sy.init_printing()
 #Create symbols for the ODE
 r,k,N0, t = sy.symbols('r k N_0 t' )
 N = sy.symbols('N', function=True)
-ode = N(t).diff(t) - (r*N(t)*(1-N(t)/k) - N(t)**2/(1+N(t)**2))
+ode = N(t).diff(t) - (r*N(t)*(1-N(t)/k))# - N(t)**2/(1+N(t)**2))
 sy.pprint(sy.Eq(ode))
 #solve the ODE
 ode_sol = sy.dsolve(ode, N(t))
