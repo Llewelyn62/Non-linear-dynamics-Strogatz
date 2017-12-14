@@ -57,7 +57,7 @@ sigma, beta, rho = 10, 8/3, 28
 u0, v0, w0 = 0,1, 0
 
 # Maximum time point and total number of time points
-tmax, n = 50, 10000
+tmax, n = 50, 100000
 #@nb.jit(nopython=False) #optimises for speed.
 def deriv_lorenz(X, t, sigma, beta, rho):
     """The Lorenz equations."""
@@ -90,14 +90,14 @@ mlab.points3d(-np.sqrt(beta*(rho-1)),-np.sqrt(beta*(rho-1)),rho-1,opacity=.5)
 mlab.text3d(-np.sqrt(beta*(rho-1))*1.2,-np.sqrt(beta*(rho-1)),rho-1,'C-')
 mlab.orientation_axes(xlabel='x',ylabel='y',zlabel='z')
 
-plt.show()
-# @mlab.animate(delay=50, ui=False)
-# def anim():
-#     f = mlab.gcf()
-#     while 1:
-#         f.scene.camera.azimuth(2)
-#         f.scene.render()
-#         yield
-#
-# a = anim() # Starts the animation.
+#plt.show()
+@mlab.animate(delay=50, ui=False)
+def anim():
+    f = mlab.gcf()
+    while 1:
+        f.scene.camera.azimuth(2)
+        f.scene.render()
+        yield
+
+a = anim() # Starts the animation.
 # mlab.savefig('Lorenz.png')

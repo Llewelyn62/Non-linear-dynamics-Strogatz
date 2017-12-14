@@ -38,7 +38,7 @@ def animate(i):
 anim = animation.FuncAnimation(fig, animate,
                                init_func=init,
                                frames=np.linspace(0,4,600),
-                               interval=50,
+                               interval=100,
                                blit=True,
                                repeat_delay=500)
 plt.show()
